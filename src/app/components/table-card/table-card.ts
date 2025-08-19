@@ -24,12 +24,16 @@ flag:boolean=true;
 toggle(){this.flag=!this.flag;}
   
 getStyle(employee:any){
+  let c='';
 let  bg='';
-if(employee.salary>=70000)bg='green'
-else if(employee.salary>40000 && employee.salary<70000)bg="orange"
-else bg="red"
-
-return{  "color":bg}
+if(employee.salary>=70000)bg='gold'
+else if(employee.salary>=40000 && employee.salary<70000)bg="silver"
+else bg="black"
+if(employee.salary>=50000)c='green'
+else c='red'
+return{  "background-color":bg,
+  'color':c,
+}
 }
 
 
@@ -37,7 +41,7 @@ getbg(employee: any) {
   let bg = "";
   if (employee.role === "Manager") bg = "lightyellow";
   else if (employee.role === "Developer") bg = "lightblue";
-  else bg = "lightpink";
+  else  if(employee.role=="Tester")bg = "lightpink";
   
   return {
     "background-color": bg,

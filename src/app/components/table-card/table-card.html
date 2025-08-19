@@ -11,13 +11,14 @@
   <tr [ngClass]="{
     'inactive' : employee.status==='Active',
     'Manager':employee.role==='Manager',
+    'tableRow':true,
     
   }" 
   [ngStyle]="getbg(employee)"
   >
     <td>{{employee.name}}</td>
     <td>{{employee.role}}</td>
-    <td [ngStyle]="getStyle(employee)">{{employee.salary}}</td>
+    <td ><div [ngStyle]="getStyle(employee)">{{employee.salary}}</div></td>
     <td>{{employee.status}}</td>
   </tr>
 }
