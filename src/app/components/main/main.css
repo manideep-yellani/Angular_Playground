@@ -1,0 +1,26 @@
+.gallery-conatiner{
+  display: flex;           
+  flex-direction: row;        
+  justify-content: flex-start;
+  align-items: stretch;       
+  flex-wrap: nowrap;          
+  gap: 10px;    
+  width: 100%;   
+  padding:10px;            
+}
+.gallery-image-container img{
+  max-width: 100%;       
+  height: auto;          
+  display: block;  
+}
+
+.freedom-container{
+  width:100%;
+  
+
+}
+
+.freedom-img{
+  object-fit:cover;
+  width:100%;
+}

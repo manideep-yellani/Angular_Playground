@@ -1,0 +1,43 @@
+@if(flag){<table >
+  <tbody>
+  <tr>
+    <th>Name</th>
+    <th>ROLE</th>
+    <th>SALARY</th>
+    <th>STATUS</th>
+  </tr>
+
+@for(employee of employees;track $index){
+  <tr [ngClass]="{
+    'inactive' : employee.status==='Active',
+    'Manager':employee.role==='Manager',
+    
+  }" 
+  [ngStyle]="getbg(employee)"
+  >
+    <td>{{employee.name}}</td>
+    <td>{{employee.role}}</td>
+    <td [ngStyle]="getStyle(employee)">{{employee.salary}}</td>
+    <td>{{employee.status}}</td>
+  </tr>
+}
+</tbody>
+</table>}
+
+@if(!flag){
+  @for(employee of employees;track $index){
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="https://assets.codepen.io/1477099/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1578512866&width=512" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{employee.name}}</h5>
+    <p class="card-text">{{employee.role}}</p>
+    <p class="card-text">{{employee.salary}}</p>
+    <p class="card-text">{{employee.status}}</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+  }
+}
+
+
+<button (click)="toggle()">{{flag?"Card":"Table"}}</button>

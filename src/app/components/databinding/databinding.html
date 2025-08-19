@@ -1,0 +1,54 @@
+<p>databinding works!</p>
+
+<div class="border border-3 rounded-3 p-2 m-2">
+  I am {{myName}}.
+  Father of a murdered son
+</div>
+<div [innerText]=myName></div>
+<div bind-innerText="myName"></div>
+<img src={{imgUrl}} style="width:30%">
+
+<div>
+  <input [value]="myName">
+  <input bind-value="myName">
+  <input value="{{myName}}">
+  <input [(ngModel)]="myName">
+</div>
+
+<button class="btn btn-primary" [disabled]="flag">add to kart</button>
+<button class="btn btn-primary" disabled="{{flag}}">add to kart</button>
+<button class="btn btn-primary" (click)="addToCart()">add to kart</button>
+<button class="btn btn-primary" on-click="addToCart()">add to kart</button>
+
+<div>
+<p [style.display]="paraDisplay">this is a paragraph that can be toggled on and off via the button below</p>
+<button class="btn btn-primary" on-click="togglePara()">toggleParagrah</button>
+
+</div>
+  <h1>{{count}}</h1>
+  <button (click)="handleCounter(1)">increment</button>
+  <button (click)="handleCounter(-1)">decerement</button>
+  <button (click)="handleCounter(0)">reset</button>
+<div>
+
+<br>
+<div>
+  <input [type]="Inputtype">
+  <button (click)="handleInputType()">Toggle</button>
+</div>
+
+
+<div>
+  <p>{{remainingChars}} character are left</p>
+  <textarea (input)="handleRemainingChars()" maxlength="10"></textarea>
+</div>
+
+<div>
+  <select [(ngModel)]="state">
+    <option>VA one love one life</option>
+    <option>TX for shit</option>
+    <option>WV for rascits</option>
+    <option>NY overrated</option>
+  </select>
+  <p>selected State: {{state}}</p>
+</div>
