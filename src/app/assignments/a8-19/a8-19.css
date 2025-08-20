@@ -3,3 +3,12 @@
             object-fit:contain;
             
         }
+
+.gg{
+    height: 220px;
+    overflow-y: auto;
+}
+
+.g{
+    height: 65px;
+}

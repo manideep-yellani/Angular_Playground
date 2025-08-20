@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
 import { Directives } from "./components/directives/directives";
 import { TableCard } from "./components/table-card/table-card";
 import { A819 } from "./assignments/a8-19/a8-19";
+import { Demo1 } from "./components/demo1/demo1";
+import { A820EmployeeCrud } from "./assignments/a8-20-employee-crud/a8-20-employee-crud";
 
 @Component({
   selector: 'app-root',
@@ -23,7 +25,9 @@ import { A819 } from "./assignments/a8-19/a8-19";
     Databinding,
     Directives,
     TableCard,
-    A819
+    A819,
+    Demo1,
+    A820EmployeeCrud
 ],
   templateUrl: './app.html',
   styleUrl: './app.css'

@@ -1,0 +1,28 @@
+<table class="empTable">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Website</th>
+            <th>Company</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+      @for(employee of employees;track $index){
+        <tr>
+            <td>{{employee.id}}</td>
+            <td>{{employee.name}}</td>
+            <td>{{employee.username}}</td>
+            <td>{{employee.email}}</td>
+            <td>{{employee.phone}}</td>
+            <td>{{employee.website}}</td>
+            <td>{{employee.company.name}}</td>
+            <td><button (click)="delEmployee($index)">Delete</button></td>
+        </tr>
+      }
+    </tbody>
+</table>

@@ -1,4 +1,5 @@
-<input [(ngModel)]="searchVal">
+<br><br>
+<input [(ngModel)]="searchVal" placeholder="search here bro">
 <button (click)="getSearchVal()">search</button>
 <select [(ngModel)]="sortOption" (ngModelChange)="priceSort()">
   <option value="noSort">sort</option>
@@ -6,17 +7,19 @@
   <option value="desc">Price High-Low</option>
 </select>
 
+<br><br><br>
+
 <div class="container">
-  <div class="row">
+  <div class="row g-3">
     @for(prod of (finalProds && finalProds.length>0?finalProds:[])| paginate:{itemsPerPage:8, currentPage:p };track $index){
     <div class="col-sm-3">
       <div class="card">
         <img src={{prod.image}} class="card-img-top" alt="...">
         <div class="card-body text-center">
-          <h5 class="card-title">{{prod.title}}</h5>
-          <p class="card-text">{{prod.price}}</p>
+          <div class="g"><h5 class="card-title">{{prod.title}}</h5></div>
+          <div class="card-text">${{prod.price}}</div>
           <p class="card-text">{{prod.category}}</p>
-          <p class="card-text">{{prod.description}}</p>
+          <p class="card-text gg">{{prod.description}}</p>
           @for(n of Array(prod.num).fill(1); track $index){
           <fa-icon [icon]='star' />
           }
