@@ -9,6 +9,7 @@ import { Databinding } from "./components/databinding/databinding";
 import { FormsModule } from '@angular/forms';
 import { Directives } from "./components/directives/directives";
 import { TableCard } from "./components/table-card/table-card";
+import { A819 } from "./assignments/a8-19/a8-19";
 
 @Component({
   selector: 'app-root',
@@ -21,7 +22,8 @@ import { TableCard } from "./components/table-card/table-card";
     Footer,
     Databinding,
     Directives,
-    TableCard
+    TableCard,
+    A819
 ],
   templateUrl: './app.html',
   styleUrl: './app.css'
