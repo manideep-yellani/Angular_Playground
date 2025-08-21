@@ -21,8 +21,36 @@
             <td>{{employee.phone}}</td>
             <td>{{employee.website}}</td>
             <td>{{employee.company.name}}</td>
-            <td><button (click)="delEmployee($index)">Delete</button></td>
+            <td><button (click)="delEmployee($index)"> Delete <fa-icon [icon]='trashCon' /> </button></td>
+            <td><app-my-modal [modalId]="'employee'+employee.id">
+
+              <div class="card">
+              <div><span>Employee Name:</span> {{employee.name}}</div>
+              <div><span>Employee ID:</span> {{employee.id}}</div>
+              <div><span>Username:</span> {{employee.username}}</div>
+              <div><span>Email:</span> {{employee.email}}</div>
+              <div><span>Phone:</span> {{employee.phone}}</div>
+              <div><span>Website:</span> {{employee.website}}</div>
+              <div><span>Company:</span> {{employee.company.name}}</div>
+              </div>
+
+            </app-my-modal></td>
         </tr>
       }
     </tbody>
 </table>
+
+<div class="form-container">
+      <h3>Add new Employee??</h3>
+      <input type="text" #employeeName placeholder="Employee Name">
+      <input type="text" #employeeId placeholder="Employee ID">
+      <input type="text" #username placeholder="Username">
+      <input type="email" #email placeholder="Email">
+      <input type="text" #phone placeholder="Phone">
+      <input type="text" #website placeholder="Website">
+      <input type="text" #companyName placeholder="Company">
+      
+      <button type="button" (click)="addEmp(employeeName, employeeId, username, email, phone, website, companyName)">
+        Add Employee
+      </button>
+    </div>

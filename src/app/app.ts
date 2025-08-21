@@ -12,6 +12,7 @@ import { TableCard } from "./components/table-card/table-card";
 import { A819 } from "./assignments/a8-19/a8-19";
 import { Demo1 } from "./components/demo1/demo1";
 import { A820EmployeeCrud } from "./assignments/a8-20-employee-crud/a8-20-employee-crud";
+import { MyModal } from "./components/my-modal/my-modal";
 
 @Component({
   selector: 'app-root',
@@ -27,7 +28,8 @@ import { A820EmployeeCrud } from "./assignments/a8-20-employee-crud/a8-20-employ
     TableCard,
     A819,
     Demo1,
-    A820EmployeeCrud
+    A820EmployeeCrud,
+    MyModal
 ],
   templateUrl: './app.html',
   styleUrl: './app.css'
