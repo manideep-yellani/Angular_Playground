@@ -13,7 +13,9 @@ transform(d:string): string {
 
   let age = now.getFullYear() - dd.getFullYear();
   let m = dd.getMonth()-now.getMonth()  ;
-  if(m<0){m=-m;age--}
+  if(m<0){m=-m;
+    if(age>0)age--
+  }
   
   return age < 0 ? '0 years old' : `${age} years ${m}months old`;
 }
