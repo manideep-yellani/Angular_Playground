@@ -1,7 +1,15 @@
 <input [(ngModel)]="ordinalInput" placeholder="get the ordinal bro" type="number">
 <p>{{ordinalInput|ordinal}}</p>
-<br><br>
+
+<div>
+<label for="birthday">Birthday:</label>
+<input type="date" id="birthday" name="birthday" [(ngModel)]="birthDate">
+<p>{{birthDate|age}}</p>
+</div>
+
+
 <input [(ngModel)]="keyword" placeholder="search here">
+
 
 <table class="table table-bordered table-striped">
   <thead>
