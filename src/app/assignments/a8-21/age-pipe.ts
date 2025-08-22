@@ -7,13 +7,15 @@ export class AgePipe implements PipeTransform {
 
 transform(d:string): string {
   if(d==="")return ''
+
   let dd=new Date(d);
   const now = new Date();
-  if(d===null)return "No valid date yet";
+
   let age = now.getFullYear() - dd.getFullYear();
-  const m = now.getMonth() - dd.getMonth();
+  let m = dd.getMonth()-now.getMonth()  ;
+  if(m<0){m=-m;age--}
   
-  return age < 0 ? '0 years old' : `${age} years old`;
+  return age < 0 ? '0 years old' : `${age} years ${m}months old`;
 }
 
 }
