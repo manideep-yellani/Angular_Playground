@@ -15,6 +15,6 @@ export class A821 {
 employees=data
 keyword:string=""
 ordinalInput:number|null=null;
-birthDate:any=null
+birthDate:string=""
 
 }
