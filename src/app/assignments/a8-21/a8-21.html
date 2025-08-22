@@ -1,0 +1,30 @@
+<input [(ngModel)]="ordinalInput" placeholder="get the ordinal bro" type="number">
+<p>{{ordinalInput|ordinal}}</p>
+<br><br>
+<input [(ngModel)]="keyword" placeholder="search here">
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Designation</th>
+      <th>Department</th>
+      <th>Salary</th>
+      <th>Email</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (emp of employees|searchFilter:keyword; track $index) {
+    <tr>
+      <td>{{emp.id}}</td>
+      <td>{{emp.name|salutation:emp.gender}}</td>
+      <td>{{emp.designation}}</td>
+      <td>{{emp.department}}</td>
+      <td>{{emp.salary}}</td>
+      <td>{{emp.email}}</td>
+    </tr>
+    }
+  </tbody>
+</table>

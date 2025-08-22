@@ -13,6 +13,8 @@ import { A819 } from "./assignments/a8-19/a8-19";
 import { Demo1 } from "./components/demo1/demo1";
 import { A820EmployeeCrud } from "./assignments/a8-20-employee-crud/a8-20-employee-crud";
 import { MyModal } from "./components/my-modal/my-modal";
+import { ProductList } from "./components/product-list/product-list";
+import { A821 } from "./assignments/a8-21/a8-21";
 
 @Component({
   selector: 'app-root',
@@ -29,7 +31,9 @@ import { MyModal } from "./components/my-modal/my-modal";
     A819,
     Demo1,
     A820EmployeeCrud,
-    MyModal
+    MyModal,
+    ProductList,
+    A821
 ],
   templateUrl: './app.html',
   styleUrl: './app.css'
