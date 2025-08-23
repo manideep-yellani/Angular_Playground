@@ -9,7 +9,7 @@ import { ApplicationRef } from '@angular/core';
 import { NgZone } from '@angular/core';
 
 @Component({
-  selector: 'app-employee-crud',
+  selector: 'app-employee-crud-assign',
   imports: [MyModal, FaIconComponent],
   templateUrl: './a8-20-employee-crud.html',
   styleUrl: './a8-20-employee-crud.css',

@@ -1,0 +1,4 @@
+<p>This is the parent</p>
+
+<app-employee-table [employees]="employees" [deleteFn]="deleteFn"></app-employee-table>
+<app-employee-add (addEvent)="addEmployeeFromChild($event)"></app-employee-add>

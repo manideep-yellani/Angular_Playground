@@ -1,52 +1,9 @@
-<div class="'container" style="padding:30px;padding-left: 50px;padding-right: 50px;">
+<div class="container">
   <div class="row">
-    <div class="col">
-      <div class="category">
-        <img src="https://rukminim2.flixcart.com/fk-p-flap/64/64/image/3dbe4c89fbf0003d.png?q=100">
-        <div>Travel</div>
+    @for (categoryObj of allCategories; track $index) {
+      <div class="col">
+        <app-category-item [categoryObj]="categoryObj"></app-category-item>
       </div>
-    </div>
-        <div class="col">
-      <div class="category">
-        <img src="https://rukminim2.flixcart.com/fk-p-flap/64/64/image/cd6aca4f61e8ea95.png?q=100">
-        <div>Mobiles</div>
-      </div>
-    </div>
-        <div class="col">
-      <div class="category">
-        <img src="https://rukminim2.flixcart.com/fk-p-flap/64/64/image/75ac28a1e9192898.png?q=100">
-        <div>Discounts</div>
-      </div>
-    </div>
-        <div class="col">
-      <div class="category">
-        <img src="https://rukminim2.flixcart.com/fk-p-flap/64/64/image/9c64dfa667885ca9.png?q=100">
-        <div>TV & Appliances</div>
-      </div>
-    </div>
-     <div class="col">
-      <div class="category">
-        <img src="https://rukminim2.flixcart.com/fk-p-flap/64/64/image/3dbe4c89fbf0003d.png?q=100">
-         <div>Travel</div>
-      </div>
-    </div>
-        <div class="col">
-      <div class="category">
-        <img src="https://rukminim2.flixcart.com/fk-p-flap/64/64/image/cd6aca4f61e8ea95.png?q=100">
-        <div>Mobiles</div>
-      </div>
-    </div>
-        <div class="col">
-      <div class="category">
-        <img src="https://rukminim2.flixcart.com/fk-p-flap/64/64/image/75ac28a1e9192898.png?q=100">
-        <div>Discounts</div>
-      </div>
-    </div>
-        <div class="col">
-      <div class="category">
-        <img src="https://rukminim2.flixcart.com/fk-p-flap/64/64/image/9c64dfa667885ca9.png?q=100">
-        <div>TV & Appliances</div>
-      </div>
-    </div>
+    }
   </div>
 </div>

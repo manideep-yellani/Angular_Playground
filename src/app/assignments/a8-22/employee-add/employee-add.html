@@ -1,0 +1,14 @@
+<div class="form-container">
+      <h3>Add new Employee??</h3>
+      <input type="text" #employeeName placeholder="Employee Name">
+      <input type="text" #employeeId placeholder="Employee ID">
+      <input type="text" #username placeholder="Username">
+      <input type="email" #email placeholder="Email">
+      <input type="text" #phone placeholder="Phone">
+      <input type="text" #website placeholder="Website">
+      <input type="text" #companyName placeholder="Company">
+      
+      <button type="button" (click)="addEmp(employeeName, employeeId, username, email, phone, website, companyName)">
+        Add Employee
+      </button>
+</div>

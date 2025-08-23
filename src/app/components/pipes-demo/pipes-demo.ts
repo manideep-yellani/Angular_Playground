@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { interval } from 'rxjs';
 import { RemainingPipe } from '../../custom-pipes/remaining-pipe';
+import { MySortPipe } from '../../custom-pipes/my-sort-pipe';
 
 @Component({
   selector: 'app-pipes-demo',
@@ -10,6 +11,7 @@ import { RemainingPipe } from '../../custom-pipes/remaining-pipe';
     CommonModule,
     FormsModule,
     RemainingPipe,
+    MySortPipe
   ],
   templateUrl: './pipes-demo.html',
   styleUrl: './pipes-demo.css'
@@ -20,10 +22,10 @@ export class PipesDemo {
   today = new Date();
 
   user = { name: 'Virat Kohli', age: 45, add: 'Delhi' };
-  arr = [10, 20, 30, 40, 50, 60, 70];
+  arr = [10, 60, 70, 20, 30, 40, 50];
 
   num = interval(2000);
 
-  msg:string = '';
-  msg2:string = '';
+  msg: string = '';
+  msg2: string = '';
 }
