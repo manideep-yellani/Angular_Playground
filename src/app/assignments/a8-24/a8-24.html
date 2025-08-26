@@ -1,0 +1,31 @@
+<p>a8-24 works!</p>
+<select [(ngModel)]="info" (ngModelChange)="getData(info)">
+  <option value="All">All</option>
+  <option value="female">Female</option>
+  <option value="male">Male</option>
+</select>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Gender</th>
+                <th>Email</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+          @for(employee of data;track $index){
+            <tr>
+                <td>{{employee.id}}</td>
+                <td>{{employee.firstName}}</td>
+                <td>{{employee.lastName}}</td>
+                <td>{{employee.gender}}</td>
+                <td>{{employee.email}}</td>
+                <td>{{employee.sal}}</td>
+            </tr>
+          }
+        </tbody>
+    </table>

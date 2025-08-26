@@ -13,6 +13,7 @@ export class EmployeeCrud {
 
 actualEmployees=data
 employees=data
+
 deleteFn(i:number){
 this.employees.splice(i,1)
 }

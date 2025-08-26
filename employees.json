@@ -1,0 +1,36 @@
+{
+  "employees": [
+    {
+      "id": "101",
+      "firstName": "virat",
+      "lastName": "kohli",
+      "email": "virat@gmail.com",
+      "gender": "male",
+      "sal": 5000
+    },
+    {
+      "id": "111",
+      "firstName": "natalia",
+      "lastName": "potters",
+      "email": "virat@gmail.com",
+      "gender": "female",
+      "sal": 5000
+    },
+    {
+      "id": "102",
+      "firstName": "sachin",
+      "lastName": "tendulkar",
+      "email": "sachin@gmail.com",
+      "gender": "male",
+      "sal": 6000
+    },
+    {
+      "id": "103",
+      "firstName": "bhargav",
+      "lastName": "angi",
+      "email": "bhargav@gmail.com",
+      "gender": "male",
+      "sal": 5800
+    }
+  ]
+}

@@ -17,27 +17,19 @@ import { ProductList } from "./components/product-list/product-list";
 import { A821 } from "./assignments/a8-21/a8-21";
 import { ParentDemo } from "./components/parent-demo/parent-demo";
 import { EmployeeCrud } from "./assignments/a8-22/employee-crud/employee-crud";
+import { A824 } from "./assignments/a8-24/a8-24";
+import { HttpDemo1 } from "./components/http-demo1/http-demo1";
+import { CommentList } from "./components/comment-list/comment-list";
+import { Products } from "./components/products/products";
+import { A825 } from "./assignments/a8-25/a8-25";
 
 @Component({
   selector: 'app-root',
   imports: [
-    Navbar,
-    FormsModule,
-    Categories,
-    Carousel,
-    Main,
-    Footer,
-    Databinding,
-    Directives,
-    TableCard,
-    A819,
-    Demo1,
-    A820EmployeeCrud,
-    MyModal,
-    ProductList,
-    A821,
-    ParentDemo,
-    EmployeeCrud
+    HttpDemo1,
+    CommentList,
+    Products,
+    A825
 ],
   templateUrl: './app.html',
   styleUrl: './app.css'

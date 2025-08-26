@@ -1,0 +1,76 @@
+<p>a8-25 works!</p>
+
+@if(!isLoading){
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Gender</th>
+            <th>Email</th>
+            <th>Salary</th>
+            <th>Delete</th>
+            <th>Update</th>
+        </tr>
+    </thead>
+    <tbody>
+      @for(employee of data;track $index){
+        <tr>
+            <td>{{employee.id}}</td>
+            <td>{{employee.firstName}}</td>
+            <td>{{employee.lastName}}</td>
+            <td>{{employee.gender}}</td>
+            <td>{{employee.email}}</td>
+            <td>{{employee.sal}}</td>
+            <td><button (click)="onDeleteUser(employee.id)">Delete</button></td>
+            <td><button (click)="update(employee.id)">Update</button></td>
+        </tr>
+      }
+    </tbody>
+</table>
+}
+@else {
+  <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" alt="">
+}
+
+
+<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+  <div class="mb-3">
+    <label for="firstName" class="form-label">First Name</label>
+    <input type="text" class="form-control" id="firstName" name="firstName" 
+           [(ngModel)]="user.firstName" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="lastName" class="form-label">Last Name</label>
+    <input type="text" class="form-control" id="lastName" name="lastName" 
+           [(ngModel)]="user.lastName" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" class="form-control" id="email" name="email" 
+           [(ngModel)]="user.email" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="gender" class="form-label">Gender</label>
+    <select class="form-control" id="gender" name="gender" 
+            [(ngModel)]="user.gender" required>
+      <option value="">Select Gender</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label for="sal" class="form-label">Salary</label>
+    <input type="number" class="form-control" id="sal" name="sal" 
+           [(ngModel)]="user.sal" required>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Add Employee</button>
+</form>
+

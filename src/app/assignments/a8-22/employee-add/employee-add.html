@@ -1,14 +1,38 @@
-<div class="form-container">
-      <h3>Add new Employee??</h3>
-      <input type="text" #employeeName placeholder="Employee Name">
-      <input type="text" #employeeId placeholder="Employee ID">
-      <input type="text" #username placeholder="Username">
-      <input type="email" #email placeholder="Email">
-      <input type="text" #phone placeholder="Phone">
-      <input type="text" #website placeholder="Website">
-      <input type="text" #companyName placeholder="Company">
-      
-      <button type="button" (click)="addEmp(employeeName, employeeId, username, email, phone, website, companyName)">
-        Add Employee
-      </button>
+<div class="container mt-4">
+  <div class="card shadow-sm">
+    <div class="card-body">
+      <h3 class="card-title mb-3 text-center">➕ Add New Employee</h3>
+
+      <div class="mb-3">
+        <input type="text" class="form-control" #employeeName placeholder="Employee Name">
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" #employeeId placeholder="Employee ID">
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" #username placeholder="Username">
+      </div>
+      <div class="mb-3">
+        <input type="email" class="form-control" #email placeholder="Email">
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" #phone placeholder="Phone">
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" #website placeholder="Website">
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" #companyName placeholder="Company">
+      </div>
+
+      <div class="d-grid">
+        <button 
+          type="button" 
+          class="btn btn-primary"
+          (click)="addEmp(employeeName, employeeId, username, email, phone, website, companyName)">
+          Add Employee
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
