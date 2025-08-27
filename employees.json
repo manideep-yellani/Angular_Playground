@@ -40,7 +40,7 @@
       "gender": "female",
       "sal": 5000
     },
-        {
+    {
       "id": "1031",
       "firstName": "virat",
       "lastName": "kohli",
@@ -50,30 +50,6 @@
     },
     {
       "id": "1131",
-      "firstName": "natalia",
-      "lastName": "potters",
-      "email": "virat@gmail.com",
-      "gender": "female",
-      "sal": 5000
-    },
-    {
-      "id": "1032",
-      "firstName": "sachin",
-      "lastName": "tendulkar",
-      "email": "sachin@gmail.com",
-      "gender": "male",
-      "sal": 6000
-    },
-    {
-      "id": "10333",
-      "firstName": "bhargav",
-      "lastName": "angi",
-      "email": "bhargav@gmail.com",
-      "gender": "male",
-      "sal": 5800
-    },
-    {
-      "id": "11361",
       "firstName": "natalia",
       "lastName": "potters",
       "email": "virat@gmail.com",
