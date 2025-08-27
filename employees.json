@@ -47,14 +47,6 @@
       "email": "virat@gmail.com",
       "gender": "male",
       "sal": 5000
-    },
-    {
-      "id": "1131",
-      "firstName": "natalia",
-      "lastName": "potters",
-      "email": "virat@gmail.com",
-      "gender": "female",
-      "sal": 5000
     }
   ]
 }
