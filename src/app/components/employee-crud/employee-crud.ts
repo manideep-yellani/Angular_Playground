@@ -1,6 +1,6 @@
 import { FormsModule } from '@angular/forms';
-import { Employee } from './../../services/employee';
-import { Component } from '@angular/core';
+import { EmployeeService } from './../../services/employee';
+import { Component, OnChanges, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-employee-crud',
@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
   templateUrl: './employee-crud.html',
   styleUrl: './employee-crud.css'
 })
-export class EmployeeCrud {
+export class EmployeeCrud implements OnInit {
   employeeArr: any = [];
 
   newEmpToAdd: any = {
@@ -22,7 +22,7 @@ export class EmployeeCrud {
     "sal": null
   }
 
-  constructor(private employeeService: Employee) {
+  constructor(private employeeService: EmployeeService) {
   }
 
   ngOnInit() {
@@ -30,6 +30,7 @@ export class EmployeeCrud {
   }
   fetchEmployees() {
     this.employeeService.getAllEmployees().subscribe((response: any) => {
+      console.log(response)
       this.employeeArr = response;
     })
   }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Employee } from '../../models/employee';
+import { Employee } from '../../models/employee-ingterface';
 import { inject } from '@angular/core';
 import { Crud } from './crud-service';
 import { FormsModule } from '@angular/forms';
