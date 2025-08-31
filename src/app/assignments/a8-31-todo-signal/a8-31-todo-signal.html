@@ -1,0 +1,29 @@
+<p>a8-31-todo-signal works!</p>
+
+<div class="todo-container">
+  <h1>ToDo List</h1>
+  
+  <div class="stats">
+    <p>Completed: {{ completedToDos().length }}</p>
+    <p>Remaining: {{ remainingToDos().length }}</p>
+  </div>
+
+  <div class="todo-list">
+    @for (todo of todos(); track todo.id) {
+      <div>
+      
+      <input 
+        type="checkbox" 
+        [checked]="todo.isCompleted"
+        (change)="toggleTodo(todo.id)">
+      
+      <span>{{ todo.text }}</span>
+      
+      <button 
+        (click)="toggleTodo(todo.id)">
+        {{ todo.isCompleted ? 'Undo' : 'Complete' }}
+      </button>
+    </div>
+    }
+  </div>
+</div>

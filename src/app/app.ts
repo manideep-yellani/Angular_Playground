@@ -4,10 +4,12 @@ import { ObservableDemo1 } from "./components/observable-demo1/observable-demo1"
 import { ObservableDemo2 } from "./components/observable-demo2/observable-demo2";
 import { ProductList } from './components/product-list/product-list';
 import { Cart } from "./components/cart/cart";
+import { A830EmployeeSubject } from "./assignments/a8-30-employee-subject/a8-30-employee-subject";
+import { A831TodoSignal } from "./assignments/a8-31-todo-signal/a8-31-todo-signal";
 
 @Component({
   selector: 'app-root',
-  imports: [EmployeeCrud, ObservableDemo1, ObservableDemo2, ProductList, Cart],
+  imports: [EmployeeCrud, ObservableDemo1, ObservableDemo2, ProductList, Cart, A830EmployeeSubject, A831TodoSignal],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
