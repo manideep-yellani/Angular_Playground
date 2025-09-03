@@ -1,0 +1,13 @@
+<div  (click)="toggle=!toggle">
+  <fa-icon [icon]="folderIcon"> </fa-icon>
+  {{ folderStruct.name }}
+</div>
+@if(toggle){
+<div style="padding-left: 20px">
+  @for(item of folderStruct.items;track $index){ @if(item.isFolder==true){
+  <app-folder-comp [folderStruct]="item"></app-folder-comp>
+  } } @for(item of folderStruct.items;track $index){ @if(item.isFolder==false){
+  <div><fa-icon [icon]="fileCon"></fa-icon> {{item.name }}</div>
+  } }
+</div>
+}
