@@ -1,23 +1,30 @@
-// import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClient } from '@angular/common/http';
+import { Component, effect, signal } from '@angular/core';
 
-// import { SignalDemo } from './signal-demo';
-
-// describe('SignalDemo', () => {
-//   let component: SignalDemo;
-//   let fixture: ComponentFixture<SignalDemo>;
-
-//   beforeEach(async () => {
-//     await TestBed.configureTestingModule({
-//       imports: [SignalDemo]
-//     })
-//     .compileComponents();
-
-//     fixture = TestBed.createComponent(SignalDemo);
-//     component = fixture.componentInstance;
-//     fixture.detectChanges();
-//   });
-
-//   it('should create', () => {
-//     expect(component).toBeTruthy();
-//   });
-// });
+@Component({
+  selector: 'app-signal-demo2',
+  imports: [],
+  templateUrl: './signal-demo2.html',
+  styleUrl: './signal-demo2.css'
+})
+export class SignalDemo2 {
+  userId = signal(1);
+  userData: any;
+  userDetailsEffect = effect(() => {
+    const id = this.userId();
+    this.fetchUserDetails(id);
+  });
+  destroyEffect() {
+    this.userDetailsEffect.destroy()
+  }
+  constructor(private httpClient: HttpClient) {
+  }
+  fetchUserDetails(id: number) {
+    this.httpClient.get(`https://jsonplaceholder.typicode.com/users/${id}`).subscribe(response => {
+      this.userData = response;
+    })
+  }
+  incrementUserId() {
+    this.userId.update(val => val + 1);
+  }
+}

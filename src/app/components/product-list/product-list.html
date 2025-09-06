@@ -27,6 +27,8 @@
             ({{product.rating.count}})
           </p>
           <a href="#" class="btn btn-primary" (click)="addToCart(product)">Add To cart</a>
+          <button class="btn btn-primary mx-1" [routerLink]="['/productdetails']"
+            [queryParams]="{id:product.id,name:product.title,price:product.price}">Details</button>
         </div>
       </div>
     </div>
